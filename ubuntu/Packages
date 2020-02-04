@@ -1,0 +1,17 @@
+Package: vpad
+Version: 0.1-1
+Architecture: all
+Maintainer: Anthony <vpad@responsivetech.ca>
+Installed-Size: 11
+Depends: i3
+Filename: ./vpad_0.1-1_all.deb
+Size: 2392
+MD5sum: 3d4ae82f6b34007bd0c0f8dfb1ce971a
+SHA1: ffe2f1d0c3b769ed68f1ee674f87a5ba4a025708
+SHA256: 1760485811935009a8580a75b6d0fa461d0ceadc3a4dd2316383401e05aa867a
+Section: unknown
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
