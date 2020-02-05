@@ -3,7 +3,7 @@
 APT_PACKAGES="i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock\
  scrot xorg xserver-xorg wget unzip wpasupplicant bluez net-tools perl\
  microcode.ctl intel-microcode tlp rxvt-unicode git vim fonts-font-awesome\
- fonts-hack xsel xdg-utils fonts-symbola xinit"
+ fonts-hack xsel xdg-utils fonts-symbola xinit wicd wicd-cli wicd-curses wicd-daemon"
 
 CHROME_URL="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
@@ -13,10 +13,12 @@ if [[ -z \$DISPLAY ]] && [[ \$(tty) = /dev/tty1 ]]; then
   startx
 fi"
 
-TEXT_XINIT='
+TEXT_XINIT="
 # Setup i3
-alias open="xdg-open"
-i3'
+alias open=\"xdg-open\"
+xrdb $HOME/.Xresources
+i3
+xrdb $HOME/.Xresources"
 
 TEXT_AUTOLOGIN="
 [Service]
