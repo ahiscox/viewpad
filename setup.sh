@@ -73,6 +73,8 @@ fi
 # Copy Xresources
 if [ ! -f "$HOME/.Xresources" ]; then
 	cp Xresources $HOME/.Xresources
+	# And load into urxvt
+	xrdb $HOME/.Xresources
 else
 	echo "Xresources setup already, skipping"
 fi
