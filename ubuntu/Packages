@@ -1,17 +1,17 @@
 Package: vpad
-Version: 0.1-1
+Version: 0.1-2
 Architecture: all
 Maintainer: Anthony <vpad@responsivetech.ca>
-Installed-Size: 11
-Depends: i3
-Filename: ./vpad_0.1-1_all.deb
-Size: 2392
-MD5sum: 3d4ae82f6b34007bd0c0f8dfb1ce971a
-SHA1: ffe2f1d0c3b769ed68f1ee674f87a5ba4a025708
-SHA256: 1760485811935009a8580a75b6d0fa461d0ceadc3a4dd2316383401e05aa867a
+Installed-Size: 12
+Depends: i3, ubuntu-drivers-common, mesa-utils, mesa-utils-extra, gnupg, numlockx, xautolock, scrot, xorg, xserver-xorg, wget, unzip, wpasupplicant
+Filename: ./vpad_0.1-2_all.deb
+Size: 2664
+MD5sum: 90852c6c8f7f267a2ddd880f741dc821
+SHA1: 369bf5ec5099e34b79efb9ecb927a180c3c137cd
+SHA256: 417c6de1ec481c6debe4f17c6da93557296fb7e9a9ecce55bda35a9d16bff2bd
 Section: unknown
 Priority: optional
 Homepage: <insert the upstream URL, if relevant>
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Setup a Viewpad VPAD10
+ This creates a base environment for Viewpad VPAD10 with i3, wifi, bluetooth, etc.
 
