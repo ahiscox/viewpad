@@ -1,7 +1,7 @@
 APT_PACKAGES="
-i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock \
-scrot xorg xserver-xorg wget unzip wpasupplicant bluez net-tools perl \
-microcode.ctl intel-microcode tlp rxvt-unicode git vim fonts-font-awesome \
+i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock 
+scrot xorg xserver-xorg wget unzip wpasupplicant bluez net-tools perl 
+microcode.ctl intel-microcode tlp rxvt-unicode git vim fonts-font-awesome 
 fonts-hack xsel xdg-open fonts-symbola xinit"
 
 CHROME_URL="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
