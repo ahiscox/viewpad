@@ -74,8 +74,6 @@ if [ ! -f "$HOME/.urxvt/ext/keyboard-select" ]; then
 	mkdir -pv $HOME/.urxvt/ext
 	git clone https://github.com/muennich/urxvt-perls
 	cp urxvt-perls/keyboard-select $HOME/.urxvt/ext/keyboard-select
-	cp urxvt-perls/clipboard $HOME/.urxvt/ext/clipboard
-	cp urxvt-perls/url-select $HOME/.urxvt/ext/url-select
 	rm -rf urxvt-perls
 else
 	echo "urxvt select already setup, skipping"
