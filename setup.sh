@@ -1,10 +1,9 @@
 #!/bin/bash
 
-APT_PACKAGES="
-i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock\
+APT_PACKAGES="i3 ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg numlockx xautolock\
  scrot xorg xserver-xorg wget unzip wpasupplicant bluez net-tools perl\
  microcode.ctl intel-microcode tlp rxvt-unicode git vim fonts-font-awesome\
- fonts-hack xsel xdg-open fonts-symbola xinit"
+ fonts-hack xsel xdg-utils fonts-symbola xinit"
 
 CHROME_URL="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 
@@ -26,7 +25,7 @@ ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 "
 
 # Install packages
-sudo apt -y install "$APT_PACKAGES"
+sudo apt -y install $APT_PACKAGES
 
 # Add startx to ~/.bashrc if not existing
 case `grep -Fx "# Setup startx" "$HOME/.bashrc" >/dev/null; echo $?` in
