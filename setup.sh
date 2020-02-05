@@ -26,8 +26,7 @@ ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 "
 
 # Install packages
-echo "Installing $APT_PACKAGES"
-sudo apt -y install $APT_PACKAGES
+sudo apt -y install "$APT_PACKAGES"
 
 # Add startx to ~/.bashrc if not existing
 case `grep -Fx "# Setup startx" "$HOME/.bashrc" >/dev/null; echo $?` in
