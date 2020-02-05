@@ -26,16 +26,6 @@ ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux
 # Install packages
 sudo apt -y install $APT_PACKAGES
 
-# Setup Google Chrome if not installed
-if [ ! -f "/usr/bin/google-chrome" ]; then
-	rm /tmp/chrome.deb
-	wget --show-progress -O /tmp/chrome.deb "$CHROME_URL"
-	sudo dpkg -i /tmp/chrome.deb
-	sudo apt install -f -y
-else
-	echo "Google Chrome already setup, skipping"
-fi
-
 # Add startx to ~/.bashrc if not existing
 case `grep -Fx "# Setup startx" "$HOME/.bashrc" >/dev/null; echo $?` in
   0)
@@ -64,7 +54,7 @@ esac
 if [ ! -f "/etc/systemd/system/getty@tty1.service.d/autologin.conf" ]; then
 	sudo mkdir -pv /etc/systemd/system/getty@tty1.service.d/
 	echo "$TEXT_AUTOLOGIN" | sudo tee /etc/systemd/system/getty@tty1.service.d/autologin.conf
-	systemctl enable getty@tty1.service
+	sudo systemctl enable getty@tty1.service
 else
 	echo "Autologin already enabled, skipping"
 fi
@@ -86,3 +76,12 @@ else
 	echo "Xresources setup already, skipping"
 fi
 
+# Setup Google Chrome if not installed
+if [ ! -f "/usr/bin/google-chrome" ]; then
+	rm /tmp/chrome.deb
+	wget --show-progress -O /tmp/chrome.deb "$CHROME_URL"
+	sudo dpkg -i /tmp/chrome.deb
+	sudo apt install -f -y
+else
+	echo "Google Chrome already setup, skipping"
+fi
